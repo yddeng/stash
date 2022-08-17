@@ -1,0 +1,28 @@
+﻿!QuestConfig
+questID: 10211
+questType: MainStory
+questTitle: 第二章主线任务11
+questGoal: 通过主线关卡第二章第11关
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray:
+- 10212
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_InstanceSucceed
+  instanceID: 10211
+  conditionType: InstanceSucceed
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 501

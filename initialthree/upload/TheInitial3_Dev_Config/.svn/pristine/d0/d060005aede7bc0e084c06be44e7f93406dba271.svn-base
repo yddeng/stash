@@ -1,0 +1,28 @@
+﻿!QuestConfig
+questID: 10212
+questType: MainStory
+questTitle: 第二章主线任务12
+questGoal: 通过主线关卡第二章第12关
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray:
+- 10213
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_InstanceSucceed
+  instanceID: 10212
+  conditionType: InstanceSucceed
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 501

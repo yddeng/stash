@@ -1,0 +1,28 @@
+﻿!QuestConfig
+questID: 104
+questType: Daily
+questTitle: 每日在线任务1
+questGoal: 在线超过10分钟
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray:
+- 105
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_OnlineTime
+  time: 600
+  conditionType: OnlineTime
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 901

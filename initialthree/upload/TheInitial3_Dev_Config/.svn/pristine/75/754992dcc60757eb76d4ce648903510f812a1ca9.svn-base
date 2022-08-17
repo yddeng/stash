@@ -1,0 +1,28 @@
+﻿!QuestConfig
+questID: 102
+questType: Daily
+questTitle: 每日战斗训练1
+questGoal: 通关任意副本1次
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray:
+- 103
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_AnyInstanceSucceed
+  count: 1
+  conditionType: AnyInstanceSucceed
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 901

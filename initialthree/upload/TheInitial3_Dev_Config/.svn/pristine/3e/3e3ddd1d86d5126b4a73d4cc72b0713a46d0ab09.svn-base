@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1544257645, guid: edf1a5bc0faf85e4f926a2b5104c5c85, type: 3}
+  m_Name: WeatherConfig
+  m_EditorClassIdentifier:
+  UpdateTimeVersion:
+  weatherInstanceList:
+  - weatherTypeID: 100
+    weatherTypeOne: 1
+    weatherTypeTwo: 0
+  - weatherTypeID: 101
+    weatherTypeOne: 4
+    weatherTypeTwo: 0
+  - weatherTypeID: 102
+    weatherTypeOne: 8
+    weatherTypeTwo: 0
+  - weatherTypeID: 103
+    weatherTypeOne: 16
+    weatherTypeTwo: 0
+  - weatherTypeID: 104
+    weatherTypeOne: 32
+    weatherTypeTwo: 0
+  - weatherTypeID: 105
+    weatherTypeOne: 64
+    weatherTypeTwo: 0
+  - weatherTypeID: 201
+    weatherTypeOne: 8
+    weatherTypeTwo: 4
+  weatherRandomRuleList:
+  - ruleID: 200
+    randomWeatherList:
+    - weatherID: 100
+      durationMin: 6
+      durationMax: 12
+      nextRandomWeatherList:
+      - weatherID: 101
+        probability: 0.5
+      - weatherID: 102
+        probability: 0.4
+      - weatherID: 103
+        probability: 0.1
+    - weatherID: 101
+      durationMin: 2
+      durationMax: 4
+      nextRandomWeatherList:
+      - weatherID: 100
+        probability: 0.3
+      - weatherID: 102
+        probability: 0.3
+      - weatherID: 103
+        probability: 0.2
+      - weatherID: 201
+        probability: 0.2
+    - weatherID: 102
+      durationMin: 4
+      durationMax: 12
+      nextRandomWeatherList:
+      - weatherID: 100
+        probability: 0.1
+      - weatherID: 103
+        probability: 0.3
+      - weatherID: 201
+        probability: 0.6
+    - weatherID: 103
+      durationMin: 6
+      durationMax: 10
+      nextRandomWeatherList:
+      - weatherID: 104
+        probability: 0.5
+      - weatherID: 105
+        probability: 0.5
+    - weatherID: 104
+      durationMin: 2
+      durationMax: 6
+      nextRandomWeatherList:
+      - weatherID: 102
+        probability: 0.5
+      - weatherID: 103
+        probability: 0.5
+    - weatherID: 105
+      durationMin: 4
+      durationMax: 6
+      nextRandomWeatherList:
+      - weatherID: 103
+        probability: 0.5
+      - weatherID: 101
+        probability: 0.5
+    - weatherID: 201
+      durationMin: 4
+      durationMax: 8
+      nextRandomWeatherList:
+      - weatherID: 100
+        probability: 0.4
+      - weatherID: 101
+        probability: 0.3
+      - weatherID: 102
+        probability: 0.3
+  randomRuleAndTimeList:
+  - randomRuleID: 200
+    timeStartDate:
+      month: 1
+      day: 1
+    timeEndDate:
+      month: 1
+      day: 1
+  specifiedWeatherList:
+  - weatherID: 101
+    timeStartDate:
+      month: 1
+      day: 1
+    timeStartMoment:
+      hour: 0
+      minute: 0
+    timeEndDate:
+      month: 1
+      day: 1
+    timeEndMoment:
+      hour: 0
+      minute: 0
+

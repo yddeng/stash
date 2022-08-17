@@ -1,0 +1,74 @@
+﻿!QuestConfig
+questID: 10113
+questType: MainStory
+questTitle: 第一章主线任务13
+questGoal: 通关第一章所有关卡
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray:
+- 10201
+- 10202
+- 10203
+- 10204
+- 10205
+- 10206
+- 10207
+- 10207
+- 10209
+- 10210
+- 10211
+- 10212
+- 10213
+- 10214
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_InstanceSucceed
+  instanceID: 10101
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10102
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10103
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10104
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10105
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10106
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10107
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10108
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10109
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10110
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10111
+  conditionType: InstanceSucceed
+- !QuestCondition_InstanceSucceed
+  instanceID: 10112
+  conditionType: InstanceSucceed
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 501

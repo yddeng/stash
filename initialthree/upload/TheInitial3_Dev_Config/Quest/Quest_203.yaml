@@ -1,0 +1,27 @@
+﻿!QuestConfig
+questID: 203
+questType: DailyReward
+questTitle: 活跃度任务3
+questGoal: 今日活跃度达到60
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_DailyActiveness
+  activenessCount: 60
+  conditionType: DailyActiveness
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 501

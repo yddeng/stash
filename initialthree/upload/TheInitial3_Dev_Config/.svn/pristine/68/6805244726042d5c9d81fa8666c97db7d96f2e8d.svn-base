@@ -1,0 +1,28 @@
+﻿!QuestConfig
+questID: 10202
+questType: MainStory
+questTitle: 第二章主线任务2
+questGoal: 通过主线关卡第二章第2关
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray:
+- 10203
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_InstanceSucceed
+  instanceID: 10202
+  conditionType: InstanceSucceed
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 501

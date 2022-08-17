@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab88c726ae88f7f48bb4409915dc6be3, type: 3}
+  m_Name: TimeConfig
+  m_EditorClassIdentifier: 
+  UpdateTimeVersion: 3
+  timeVelocityRatio: 1440
+  openServiceTime: 2020-01-22 12:00:00
+  openSystemTime: 2020-01-22 12:00:00
+  month:
+  - monthID: 1
+    daysNum: 31
+    season: 1
+    weeHoursTime:
+      hour: 6
+      minute: 30
+    sunriseTime:
+      hour: 12
+      minute: 0
+    noonTime:
+      hour: 18
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 2
+    daysNum: 28
+    season: 1
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 3
+    daysNum: 31
+    season: 1
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 4
+    daysNum: 30
+    season: 1
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 5
+    daysNum: 31
+    season: 2
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 6
+    daysNum: 30
+    season: 2
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 7
+    daysNum: 31
+    season: 2
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 8
+    daysNum: 31
+    season: 2
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 9
+    daysNum: 30
+    season: 3
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 10
+    daysNum: 31
+    season: 3
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 11
+    daysNum: 30
+    season: 4
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0
+  - monthID: 12
+    daysNum: 31
+    season: 4
+    weeHoursTime:
+      hour: 0
+      minute: 0
+    sunriseTime:
+      hour: 0
+      minute: 0
+    noonTime:
+      hour: 0
+      minute: 0
+    eveningTime:
+      hour: 0
+      minute: 0

@@ -1,0 +1,27 @@
+﻿!QuestConfig
+questID: 10101
+questType: MainStory
+questTitle: 第一章主线任务1
+questGoal: 通过主线关卡第一章第1关
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_InstanceSucceed
+  instanceID: 10101
+  conditionType: InstanceSucceed
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 501

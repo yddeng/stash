@@ -1,0 +1,25 @@
+﻿!QuestConfig
+questID: 10151
+questType: MainStory
+questTitle: 成员解放
+questGoal: 琉璃初级解放
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_QuestComplete
+  questID: 3101
+  conditionType: QuestComplete
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: false
+completeDropPoolID: 0

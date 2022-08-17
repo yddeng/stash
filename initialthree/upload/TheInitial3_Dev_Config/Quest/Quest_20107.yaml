@@ -1,0 +1,27 @@
+﻿!QuestConfig
+questID: 20107
+questType: MainStory
+questTitle: 装备见习任务7
+questGoal: 精练任意束流器1次
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_AnyEquipRefine
+  count: 1
+  conditionType: AnyEquipRefine
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: false
+completeDropPoolID: 0

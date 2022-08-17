@@ -1,0 +1,30 @@
+﻿!QuestConfig
+questID: 111
+questType: Daily
+questTitle: 体力消耗1
+questGoal: '消耗100点体力 '
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray:
+- 112
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_ConsumeResource
+  resourceID: 3
+  resourceType: UsualAttribute
+  count: 100
+  conditionType: ConsumeResource
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 901

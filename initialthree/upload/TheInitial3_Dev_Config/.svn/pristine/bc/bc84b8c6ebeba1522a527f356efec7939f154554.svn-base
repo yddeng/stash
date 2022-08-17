@@ -1,0 +1,26 @@
+﻿!QuestConfig
+questID: 101
+questType: Daily
+questTitle: 每日登陆
+questGoal: 每日首次登陆游戏
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_DailyLogin
+  conditionType: DailyLogin
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 901

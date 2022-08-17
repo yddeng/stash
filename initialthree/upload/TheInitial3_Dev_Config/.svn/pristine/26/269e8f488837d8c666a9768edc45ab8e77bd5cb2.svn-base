@@ -1,0 +1,27 @@
+﻿!QuestConfig
+questID: 205
+questType: DailyReward
+questTitle: 活跃度任务5
+questGoal: 今日活跃度达到100
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_DailyActiveness
+  activenessCount: 100
+  conditionType: DailyActiveness
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 501

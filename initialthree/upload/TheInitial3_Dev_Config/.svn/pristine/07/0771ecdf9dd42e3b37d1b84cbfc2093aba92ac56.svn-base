@@ -1,0 +1,27 @@
+﻿!QuestConfig
+questID: 113
+questType: Daily
+questTitle: 世界任务
+questGoal: '完成5个世界任务 '
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_AnyWorldQuestInstanceSucceed
+  count: 5
+  conditionType: AnyWorldQuestInstanceSucceed
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 903

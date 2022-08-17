@@ -1,0 +1,27 @@
+﻿!QuestConfig
+questID: 20101
+questType: MainStory
+questTitle: 装备见习任务1
+questGoal: 强化任意武器1次
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_AnyWeaponLevelUp
+  count: 1
+  conditionType: AnyWeaponLevelUp
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: false
+completeDropPoolID: 0

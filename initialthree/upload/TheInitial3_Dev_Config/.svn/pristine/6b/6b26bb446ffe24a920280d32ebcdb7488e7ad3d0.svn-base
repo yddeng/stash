@@ -1,0 +1,28 @@
+﻿!QuestConfig
+questID: 20105
+questType: MainStory
+questTitle: 装备见习任务5
+questGoal: 装备一件40以及上的5.6星装备
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_WeaponEquipped
+  level: 40
+  rarity: Star5
+  conditionType: WeaponEquipped
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: false
+completeDropPoolID: 0

@@ -1,0 +1,28 @@
+﻿!QuestConfig
+questID: 20201
+questType: MainStory
+questTitle: 角色见习任务1
+questGoal: 将任意角色等级提升至20级
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_RoleLevelUp
+  roleID: 1
+  level: 20
+  conditionType: RoleLevelUp
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: false
+completeDropPoolID: 0

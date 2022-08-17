@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27423b3ea2164b9699668acb419d679e, type: 3}
+  m_Name: UIModelCameraConfig
+  m_EditorClassIdentifier: 
+  characterMainCameraSetting:
+    allowRotation: 1
+    allowChangeDistance: 0
+    defaultYOffset: 0.8
+    defaultDistance: 1.7
+    nearDistance: 0.8
+    nearYOffsetMin: 0
+    nearYOffsetMax: 1.5
+  characterDressingCameraSetting:
+    allowRotation: 1
+    allowChangeDistance: 1
+    defaultYOffset: 0.8
+    defaultDistance: 1.7
+    nearDistance: 0.8
+    nearYOffsetMin: 0
+    nearYOffsetMax: 1.5
+  teamOverviewSetting:
+    defaultYOffset: 0.95
+    defaultDistance: 2
+  teamCharacterShowingSetting:
+    allowRotation: 1
+    allowChangeDistance: 0
+    defaultYOffset: 0.8
+    defaultDistance: 1.7
+    nearDistance: 0.8
+    nearYOffsetMin: 0
+    nearYOffsetMax: 1.5

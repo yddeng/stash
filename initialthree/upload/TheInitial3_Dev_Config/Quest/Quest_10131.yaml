@@ -1,0 +1,27 @@
+﻿!QuestConfig
+questID: 10131
+questType: MainStory
+questTitle: 将ID1升5级
+questGoal: ''
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray:
+- 10132
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_RoleLevelUp
+  roleID: 10001
+  level: 5
+  conditionType: RoleLevelUp
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 801

@@ -1,0 +1,26 @@
+﻿!QuestConfig
+questID: 10141
+questType: MainStory
+questTitle: 成员提升
+questGoal: 琉璃提升到5
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_RoleLevelUp
+  roleID: 1
+  level: 5
+  conditionType: RoleLevelUp
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: false
+completeDropPoolID: 0

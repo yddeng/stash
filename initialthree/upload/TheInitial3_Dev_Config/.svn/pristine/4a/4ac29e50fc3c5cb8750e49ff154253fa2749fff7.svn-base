@@ -1,0 +1,29 @@
+﻿!QuestConfig
+questID: 106
+questType: Daily
+questTitle: 每日资源利用任务1
+questGoal: 消耗10000金币
+questDescription: ''
+refreshTime: ''
+aliveTime: ''
+followedQuestArray: []
+activateConditionList: []
+acceptType: Auto
+acceptNpcID: 0
+acceptDialogID: 0
+acceptConditionList: []
+acceptEvents: []
+inProgressDialogID: 0
+progressConditionList:
+- !QuestCondition_ConsumeResource
+  resourceID: 5
+  resourceType: UsualAttribute
+  count: 10000
+  conditionType: ConsumeResource
+hasPanelSkip: false
+uiSkipID: 0
+doneType: Manually
+doneNpcID: 0
+doneDialogID: 0
+hasReward: true
+completeDropPoolID: 901
