@@ -1,0 +1,16 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+import "cs/proto/message/team.proto";
+import "cs/proto/message/errerror.proto";
+
+message teamPlayerGetFromGame_req {
+    required string uID = 1;
+    required uint32 teamID = 2;
+}
+
+message teamPlayerGetFromGame_resp {
+    required message.ErrCode errCode = 1;
+    optional message.TeamPlayer player = 2;
+}

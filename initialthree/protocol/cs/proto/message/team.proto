@@ -1,0 +1,36 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+
+enum TeamStatus {
+    Unknown 			= 0;	// 未知
+    Standby 			= 1;	// 待命
+    Battle_Verify 	= 2;	// 战斗验证
+    Battle_vote 		= 3;	// 战斗投票
+    Battle 			= 4;	// 战斗
+}
+
+message Team{
+    required uint32 TeamID   = 1;
+    required string TeamName = 2;
+    required TeamStatus status   = 3; // 队伍状态
+    required uint64 Header   = 4;
+    repeated TeamPlayer players = 5;
+    optional TeamTarget target = 6;
+}
+
+message TeamPlayer{
+    required string userID =1;
+    required uint64 playerID = 2;
+    required int32  characterID = 3;
+    required int32  pLevel = 4;
+    required int32  combatPower = 5; // 站力
+    required string name  = 6;
+    required int32  portrait = 7; // 头像
+    required bool   onLine   = 8;
+}
+
+message TeamTarget{
+    required int32 levelID = 1; // 副本ID
+}

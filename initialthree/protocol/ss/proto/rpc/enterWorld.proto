@@ -1,0 +1,19 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+import "ss/proto/rpc/common.proto";
+
+message enterWorld_req {
+    optional string   userID       = 1;
+    optional position pos          = 2;
+    optional string   gameAddr     = 3;    //玩家所在game节点
+    optional string   gateAddr     = 4;
+    optional uint64   gateUid      = 5;
+    optional uint64   ID           = 6;   // 角色ID
+}
+
+message enterWorld_resp {
+    optional bool ok = 1;
+    optional uint32 mapLogicAddr = 2;
+    optional int32 sceneIdx = 3;
+}

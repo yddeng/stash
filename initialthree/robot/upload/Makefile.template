@@ -1,0 +1,17 @@
+make_config:
+	./upload_make_config.sh
+
+upload_bin:
+	./upload_bin.sh
+
+upload_config:
+	./upload_config.sh
+
+upload:
+	./upload.sh
+
+restart:
+	./upload_restart.sh
+
+stop:
+	./upload_stop.sh

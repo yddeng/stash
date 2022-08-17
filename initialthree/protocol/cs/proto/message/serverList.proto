@@ -1,0 +1,32 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+ message serverList_toS{
+     required string userID = 1;
+ }
+
+ message serverList_toC{
+    repeated Server serverList = 1;
+ }
+
+enum UserType
+{
+	NONE         = 0;
+	LAST_LOGIN   = 1;
+}
+
+enum ServerType
+{
+	OPERATION = 1; //运行中
+	SHUTOFF   = 2; //维护中
+}
+
+ message Server{
+	required UserType   userType   = 1;
+	required ServerType serverType = 2;
+    required int32      serverId   = 3;
+    required string     serverName = 4;
+    required string     serverAddr = 5;
+    required int32      playerNum  = 6;
+ }

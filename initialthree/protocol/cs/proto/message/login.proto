@@ -1,0 +1,13 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message login_toS {
+	required string userID   = 1;
+}
+
+message login_toC {
+	optional string   game  = 1;
+	optional string   token = 2;
+	optional string   userID = 3;
+}

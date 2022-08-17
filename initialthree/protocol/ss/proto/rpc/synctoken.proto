@@ -1,0 +1,12 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message synctoken_req {
+	required string userid    = 1;
+	required string token     = 2;
+}
+
+message synctoken_resp {
+	required string token  = 1;
+}

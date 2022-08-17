@@ -1,0 +1,27 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message drawCardSync_toS {}
+
+message drawCardSync_toC {
+    required  bool          isAll     = 1;
+    repeated  drawCardPool  poolIndex = 2;
+    repeated  drawCardGuarantee  guarantee = 3;
+    repeated  drawCardDailyTimes dailyTimes = 4;
+}
+
+message drawCardPool{
+    optional int32 libID     = 1;
+    optional int32 poolIndex = 2;
+}
+
+message drawCardDailyTimes{
+    optional int32 libID  = 1;
+    optional int32 times  = 2;
+}
+
+message drawCardGuarantee{
+    optional int32 guaranteeID     = 1;
+    optional int32 guaranteeCount  = 2;
+}

@@ -1,0 +1,21 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message trialDungeonSync_toS {}
+
+message trialDungeonSync_toC {
+    optional bool              all         = 1;
+    repeated trialDungeon   trialDungeons  = 2;
+    optional int32          trailCount     = 3; // 试炼点,每次都同步
+    repeated trialStageReward stageReward  = 4;
+}
+
+message trialDungeon{
+    optional int32  dungeonID   = 1;
+    optional bool   getReward   = 2;
+}
+
+message trialStageReward{
+    optional int32  stage  = 1;
+}

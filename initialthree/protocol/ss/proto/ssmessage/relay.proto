@@ -1,0 +1,14 @@
+syntax = "proto2";
+package ssmessage;
+option go_package = "initialthree/protocol/ss/ssmessage";
+
+message target{
+    optional string userID = 1;
+    optional uint64 roleID = 2;
+}
+
+message relay {
+	repeated target targets = 1;
+	optional string msgType = 2;
+	optional bytes  msg     = 3;      
+}

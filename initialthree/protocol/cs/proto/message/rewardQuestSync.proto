@@ -1,0 +1,21 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/questSync.proto";
+
+message rewardQuestSync_toS {}
+
+message rewardQuestSync_toC {
+    required bool          isAll     = 1;
+    repeated rewardQuest   Quests    = 2;
+    required int32         refreshTimes = 3; // 当日已经重置次数 每次同步必传
+}
+
+message rewardQuest{
+    required int32          questID         = 1; // 任务id
+    optional QuestState     State           = 2; // 任务状态 Acceptable待接受  Running正在执行 End任务完结
+    repeated int32          characters      = 3; // 任务进行中时，不为空
+    optional int64          acceptTimestamp = 4; // 任务接取时时间戳，单位秒。
+    optional bool           isRemoved       = 5; // 任务移除
+}

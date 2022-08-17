@@ -1,0 +1,16 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+enum ErrCode {
+    OK      = 0;
+    Error   = 1;
+    Retry   = 2;
+
+    GateLogin_Redirect = 10;
+
+    Forward_UserNotFound    = 20;   // game上不存在相应的User
+    Forward_InvalidGateUser = 21;   // 不合法的gateUser
+    Forward_InvalidSeqNo    = 22;   // 不合法的SeqNo
+
+}

@@ -1,0 +1,12 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message attrSync_toS {}
+
+message attrSync_toC {
+    required bool isAll = 1;
+    repeated Attr attrs = 2;
+}

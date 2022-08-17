@@ -1,0 +1,17 @@
+#!/bin/sh
+
+work_dir=bin/upload
+
+# go
+goos=linux
+goarch=amd64
+
+# remote
+remote_workdir=workspace/robot
+remote_ssh_host=common@81.69.172.73
+remote_ssh_port=59672
+
+# configs
+service=locahost:40505
+excel_path=../configs/Excel
+quest_path=../configs/Quest

@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message enterSee_toS {}
+
+message enterSee_toC {
+	repeated viewObj objs     = 1;
+}

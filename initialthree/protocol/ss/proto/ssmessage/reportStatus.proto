@@ -1,0 +1,9 @@
+syntax = "proto2";
+package ssmessage;
+option go_package = "initialthree/protocol/ss/ssmessage";
+
+message reportStatus{
+	repeated int32  serverIds  = 1;
+	required string serverAddr = 2;
+	required int32  playerNum  = 3;
+}

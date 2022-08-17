@@ -1,0 +1,28 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+// 资源类型枚举值会存放在数据库中，此处不允许更改枚举值对应的类型，避免数据库中存放的数据错乱
+enum AssetType
+{
+    ShopFirstPay       = 1; // 商城首充
+    Teaching           = 3; // 新手教学
+}
+
+message asset {
+    optional int32      Type    = 1; // 资源类型
+    repeated assetValue assetKv = 2;
+}
+
+message assetValue{
+    optional int32 ID       = 1; // 资源 ID
+    optional int32 Count    = 2; // 资源数量
+}
+
+message assetSync_toS {}
+
+// 可以由客户端拉取，服务器也会在有变更时主动同步
+message assetSync_toC {
+    optional bool  isAll      = 1;
+    repeated asset syncAssets = 2;
+}

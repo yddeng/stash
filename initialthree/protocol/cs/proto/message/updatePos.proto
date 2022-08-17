@@ -1,0 +1,16 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+import "cs/proto/message/common.proto";
+
+message updatePos_toS {}
+
+message updateObj {
+	optional uint64   roleID = 1;
+	optional Position pos    = 2;
+	optional int32    angle  = 3;	
+}
+
+message updatePos_toC {
+	repeated updateObj objs  = 1;
+}

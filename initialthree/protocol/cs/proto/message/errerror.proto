@@ -1,0 +1,145 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+enum ErrCode
+{
+    OK             = 0; // 请求成功
+    ERROR          = 1; // 请求错误，大概率是服务器内部逻辑
+    RETRY          = 2; // 请重试(账号在线正在执行踢人流程)
+    SERVER_MAINTAINED = 3; // 服务器错误
+    FUNCTION_DISABLE = 4; // 服务器错误
+    LOGIN_ERROR    = 5; // 登陆错误
+    LOGIN_RETRY    = 6; // 服务器繁忙，重试
+    LOGIN_NOGAME   = 7; // Game服不存在
+    LOGIN_TOKEN_MISMATCH = 8; // token匹配失败
+    Banned         = 9; // 封禁
+
+    Reconnect_UserNotExist = 10; // 用户不存在
+    Reconnect_TokenErr     = 11; // token错误
+    Reconnect_StatusErr    = 12; // 用户状态错误
+
+    Create_Role_Maximum = 100; // 创角数量上限
+    Create_Role_Name_Error = 101; // 名字非法
+    Create_Role_Name_Repeat = 102; // 名字重复
+
+    NotImplemented = 198; // 功能未实现
+    Request_Argument_Err = 199; // 请求参数错误
+    Item_Not_Enough = 200; // 道具不足
+    Attr_Low        = 201; // 属性过低
+    Attr_High       = 202; // 属性过高
+    Level_Low       = 203; // 等级过低
+    Level_High      = 204; // 等级过高
+    System_Unlock   = 205; // 系统未解锁
+    User_OffLine    = 206; // 玩家离线
+    User_NotExist   = 207; // 玩家不存在
+    Config_NotExist = 208; // 配置不存在
+    Config_Error    = 209; // 配置填写错误
+    Resource_NotEnough = 210; // 资源不够
+    InitResourceFailed = 211; // 初始化资源出错
+
+    Backpack_EntityError        = 300; // 物品错误
+    Backpack_EntityExpired      = 301; // 物品过期
+    Backpack_SpaceNotEnough     = 302; // 空间不足
+    Backpack_NotAllowedToSell   = 303; // 物品不能出售
+    Backpack_NotAllowedToUse    = 304; // 物品不允许使用
+    Backpack_CanNotUse          = 305; // 物品不能使用
+    Backpack_RemTypeError       = 306; // 删除类型错误
+
+    Team_TeamNotExist         = 400; // 队伍不存在
+    Team_PlayerFull           = 401; // 队伍人数达到上限
+    Team_AlreadyInTeam        = 402; // 玩家已有队伍
+    Team_NotTeamMember        = 403; // 不是队伍成员
+    Team_NotHeader			  = 404;	// 不是队长
+    Team_TeamStatusErr        = 405; // 队伍状态错误
+    Team_NotMeetJoinLimit     = 406; // 不满足加入条件
+    Team_PlayerNotExist       = 407; // 玩家不存在
+
+    Character_NotExist              = 500; // 角色不存在
+    Character_InGroup               = 501; // 角色在队伍中
+    Character_MaxLevel              = 502; // 角色达到当前最大等级
+    Character_Level_Low             = 503; // 角色等级不够
+    Character_LevelUp_ItemError     = 504; // 角色升级使用道具错误
+    Character_LevelUp_ExpNil        = 505; // 角色升级提供经验为0
+    Character_TeamNotExist          = 506; // 角色队伍不存在
+    Character_TeamIndexFailed       = 507; // 角色队伍预设索引错误
+    Character_TeamRoleCountErr      = 508; // 角色队伍设置人数错误
+    Character_TeamRepeated          = 509; // 角色队伍重复上阵
+    Character_EvolutionMax          = 510; // 角色已进化到最大
+
+    Quest_NotExist  = 601; // 任务不存在
+    Quest_StateErr  = 602; // 任务状态错误
+    Quest_NotDone   = 603; // 当前任务条件不支持客户端主动提交
+
+    Battle_EnterConditionErr       = 700;  // 进入战斗条件不足
+    Battle_InBattle                = 701;  // 已经在战斗中
+    Battle_NotInBattle             = 702;  // 不在战斗中
+    Battle_InstanceMisMatch        = 703;  // 与服务器战斗实例不符
+
+    MainDungeons_DungeonNotOpen         = 800;  // 关卡未开启
+    MainDungeons_DungeonNoCount         = 801;  // 关卡没有次数
+    MainDungeons_AwardNumberError       = 802;  // 奖励号错误
+    MainDungeons_AwardAlreadyGot        = 803;  // 奖励已领取
+    MainDungeons_StarsNotEnough         = 804;  // 星级不足
+
+    Equip_NotExist             = 900;  // 装备不存在
+    Equip_Character_NotEquip   = 901;  // 当前角色没有穿戴该装备
+    Equip_GroupIdxErr          = 902;  // 装备组合索引错误
+    Equip_LevelMax             = 903;  // 装备强化到达上限
+    Equip_RarityLow            = 905;  // 装备品质过低错误
+    Equip_TypeErr              = 907;  // 装备类型错误
+    Equip_OrderErr             = 908;  // 装备order错误
+    Equip_Equipped             = 910;  // 装备已装备
+    Equip_NotEquip             = 911;  // 装备未装备到角色
+    Equip_InGroup              = 914;  // 装备在预设中
+    Equip_Weight               = 915;  // 装备没有足够的重量
+    Equip_RefineMax            = 916;  // 增幅器精炼到达上限
+
+    Weapon_NotExist             = 1000;  // 武器不存在
+    Weapon_LevelMax             = 1001;  // 武器强化到达上限
+    Weapon_BreakMax             = 1002;  // 武器突破到达上限
+    Weapon_TypeErr              = 1003;  // 武器类型错误
+
+    DrawCard_NotOpen                = 1200; // 卡池未开放
+    DrawCard_NotEnoughCostAssets    = 1201; // 抽卡消耗资源不足
+    DrawCard_Count                  = 1202; // 抽卡次数错误，只能是 1|10
+    DrawCard_GuaranteeLibID         = 1203; // 保底库 ID 错误，卡池中没有对应的保底库
+    DrawCard_TimesLimit             = 1204; // 抽卡次数已达上限
+
+    Level_DungeonCfgNotFound        = 1300; // 关卡配置未找到
+    Level_DungeonLock               = 1301; // 关卡未解锁
+    Level_CharacterCountError       = 1302; // 角色数量错误
+    Level_NoSpecifiedCharacter      = 1303; // 没有指定角色
+    Level_AlreadyOnFight            = 1304; // 已经在战斗中
+    Level_FightNotExist             = 1305; // 战斗不存在
+    Level_FightIDNotMatch           = 1306; // 战斗ID不匹配
+
+    ScarsIngrain_FightBossNotExist        = 1321; // 战痕印刻挑战boss不存在
+    ScarsIngrain_FightTimesNotEnough      = 1322; // 战痕印刻挑战次数不存在
+    ScarsIngrain_RoleChallengeTimes       = 1323; // 战痕印刻角色挑战次数不够
+    ScarsIngrain_GetAwardScoreErr         = 1324; // 战痕印刻拉取奖励分数错误（无配置、已经领取过）
+    ScarsIngrain_AutoFightErr             = 1325; // 战痕印刻当前不能进行自动战斗（无历史记录，已经手动战斗过,难度等级大于3）
+    ScarsIngrain_SaveScoreIDErr           = 1326; // 战痕印刻手动分数保存，ID错误
+    ScarsIngrain_AutoFightTimesNotEnough  = 1327; // 战痕印刻自动战斗次数不足
+    ScarsIngrain_BossUnlock               = 1328; // 战痕印刻boss未解锁
+    ScarsIngrain_RankIsEnd                = 1329; // 战痕印刻排行榜已经结束
+
+    BattleResurrect_NoResurrectCount    = 1401; // 没有复活次数
+    BattleResurrect_CanNotResurrect    = 1402; // 不能复活，可能是配置问题
+
+    Shop_RefreshTimesNotEnough = 1501; // 商城刷新次数达到上限
+    Shop_BuyTimesNotEnough = 1502; // 商品购买次数达到上限
+    Shop_BuyLimit = 1503; // 商品限制购买
+
+    WorldQuest_FinalAward = 1601; // 还没有完成5个任务
+    Reputation_CoinLow    = 1602; // 代币不足
+
+    Sign_Already          = 1701; // 已经签到过了
+    Sign_TimeFailed       = 1702; // 未到签到时间
+    Sign_TimesFinish      = 1703; // 签到次数已用尽
+
+    BigSecret_Locked                = 1801; // 未解锁
+    BigSecret_RefreshTimesNotEnough = 1802; // 弱点刷新次数达到上限
+    BigSecret_KeyNotEnough          = 1803; // 钥匙不足
+    BigSecret_BlessingNotEnough     = 1804; // 祝福点不足
+}

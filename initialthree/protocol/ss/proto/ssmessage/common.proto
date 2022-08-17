@@ -1,0 +1,11 @@
+syntax = "proto2";
+package ssmessage;
+option go_package = "initialthree/protocol/ss/ssmessage";
+
+enum LevelType {
+    SCENARIO = 1;
+    SCENARIO_BATTLE = 2;
+    HISTORY = 3;
+    LEGEND = 4;
+    OTHER = 5;
+}

@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message trialStageReward_toS {
+    optional int32 stageID = 1;
+}
+
+message trialStageReward_toC {}
+

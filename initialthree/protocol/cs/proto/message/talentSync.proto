@@ -1,0 +1,21 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message talentSync_toS {}
+
+message talentGroup{
+    optional int32 groupID = 1;
+    repeated talent talents = 2;
+}
+
+message talent{
+    optional int32 ID = 1;
+    optional int32 level = 2;
+}
+
+message talentSync_toC {
+    required bool    isAll     = 1;
+    repeated talentGroup groups = 2;
+    optional int32   infiniteTalentLevel = 3; // 对等级求余，读取对应的属性加成
+}

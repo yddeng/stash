@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message teamHeaderChanged_toS {
+    required uint64 newHeader = 1;
+}
+
+message teamHeaderChanged_toC {
+
+}

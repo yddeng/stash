@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message teamJoinApply_toS {
+    optional uint32		teamID 		= 1;	// 队伍ID
+}
+
+message teamJoinApply_toC {}

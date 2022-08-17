@@ -1,0 +1,33 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message levelFightEnd_toS {
+    required int64   fightID        = 1;    // 战斗ID
+    optional int32   useTime        = 2;    // 用时 单机版本使用
+    optional double  bossCurHP      = 3;    // boss 剩余血量 单机版本使用
+    optional double  bossMaxHP      = 4;    // boss 总血量 单机版本使用
+    optional bool    pass           = 5;    // 是否通关 单机版本使用
+    repeated bool    stars          = 6;    // 星级标记
+    optional int32   beHit          = 7;    // 受击数
+    optional int32   killBossCount  = 8;    // 秘境击杀boss数量
+}
+
+message levelFightEnd_toC {
+    required int32      dungeonID        = 1;  // 关卡ID
+    optional bool       pass             = 2;  // 是否通关
+    repeated bool       stars            = 3;    // 星级标记
+    repeated Award      awardList        = 4;    // 掉落奖励
+    optional int32      useTime          = 5;    // 用时
+    optional scarsIngrainEnd  scarsIngrainEnd  = 6; // 囚笼副本类型才设置
+}
+
+message scarsIngrainEnd{
+    optional int32   historyScore   = 1;    // 历史周最高分
+    optional int32   scoreID        = 2;    // 分数ID, 战痕使用
+    optional int32   totalScore     = 3;    // 分数
+    optional int32   timeScore      = 4;    // 用时
+    optional int32   damageScore    = 5;    // 伤害值
+}

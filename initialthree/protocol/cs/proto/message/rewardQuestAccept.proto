@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message rewardQuestAccept_toS {
+    required int32 questID    = 1;
+    repeated int32 characters = 2; // 任务进行中时，不为空
+}
+
+message rewardQuestAccept_toC {}

@@ -1,0 +1,28 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message reputationSync_toS {}
+
+message reputationSync_toC {
+    required  bool     isAll = 1;
+    repeated reputation reputations = 2; // 声望等级
+    repeated reputationItem   reputationItems = 3; // 声望商店道具购买次数
+    repeated reputationRefresh   refresh = 4; // 声望商店刷新次数
+}
+
+message reputationItem {
+    required int32 id = 1;
+    required int32 count = 2;
+}
+
+message reputationRefresh{
+    required int32 id = 1;
+    required int32 times = 2;
+}
+
+message reputation{
+    optional int32 campType = 1;
+    optional int32 reputationLevel = 2;
+    optional int32 currentReputation = 3;
+}

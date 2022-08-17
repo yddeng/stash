@@ -1,0 +1,21 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message mainDungeon {
+    optional int32  id          = 1;    // ID
+    optional bool   finished    = 2;    // 关卡完成
+}
+
+message mainChapter {
+    optional int32  id         = 1;    // id
+    optional bool   finished   = 2;    // 章节完成
+}
+
+message mainDungeonsSync_toS {}
+
+message mainDungeonsSync_toC {
+    optional bool           all         = 1;  // 是否所有数据
+    repeated mainChapter    chapters    = 2;  // 章节数据
+    repeated mainDungeon    dungeons    = 3;  // 关卡数据
+}

@@ -1,0 +1,15 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message rankCreate_req {
+    optional int32  rankID = 1;
+    optional int64  beginTime = 2;
+    optional int64  endTime = 3;
+    optional int32  lastRankID =4; // 上一期排行榜Id，用于回溯历史版本。
+}
+
+message rankCreate_resp {
+    optional int32 code = 1; // 0 失败，1 已经存在，2 成功，3 服务上限
+    optional string logicAddr = 2; // 1,2 需设置
+}

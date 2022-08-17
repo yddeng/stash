@@ -1,0 +1,32 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message characterSync_toS {}
+
+message characterSync_toC {
+    required bool isAll = 1;
+    repeated character characters = 2;
+}
+
+message character{
+    optional int32  CharacterID = 1; // ID
+    optional int32  Level       = 2; // 等级
+    optional int32  CurrentExp  = 3; // 当前经验
+    optional int32  BreakLevel  = 4;
+    optional uint32 WeaponID    = 6;
+    repeated uint32 EquipIDs    = 7;
+    optional int64  getTime     = 8; //获取时间戳，秒
+    optional int32  favorLevel  = 9;
+    optional int32  favorExp    = 10;
+    optional bool   isLike      = 11;
+    repeated Skill  skills      = 12;
+    optional int32  geneLevel   = 13;
+}
+
+message characterTeam{
+    repeated int32 characterList = 1; // 长度必定为3; 0 中间位，队长 1 左侧位 2 右侧位
+}
+

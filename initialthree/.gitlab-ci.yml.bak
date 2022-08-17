@@ -1,0 +1,44 @@
+stages:
+  - analysis
+  - sonar
+
+analysis:
+  stage: analysis
+  image: golang:1.12
+  variables:
+    REPO_NAME: initialthree
+  script:
+    - mkdir -p $GOPATH/src/$(dirname $REPO_NAME)
+    - ln -svf $CI_PROJECT_DIR $GOPATH/src/$REPO_NAME
+    - cd $GOPATH/src/$REPO_NAME
+    - go test -v --count=1 $REPO_NAME/node/node_battle/battle_level
+    - go test -v --count=1 $REPO_NAME/node/common/config
+    - go test -v -test.short -coverprofile=coverage.out -timeout=10s initialthree/node/node_battle/battle_config -json > report.json
+  artifacts:
+    expire_in: 1 day
+    paths:
+      - report.json
+      - coverage.out
+
+sonar:
+  stage: sonar
+  image: emeraldsquad/sonar-scanner
+  script:
+    - cd $CI_PROJECT_DIR
+    - sonar-scanner
+      -Dsonar.projectKey=initialthree
+      -Dsonar.sources=.
+      -Dsonar.host.url=http://tech.feiyuapi.com:9000
+      -Dsonar.login=dc9eea375c6c5d7aa24ddf3efa1f125380c6841d
+      -Dsonar.sources.inclusions=**/*.go
+      -Dsonar.exclusions=doc/**,**/*_test.go,**/vendor/**,.git/**,.glide/**,**/*pb.go
+      -Dsonar.language=go
+      -Dsonar.tests=.
+      -Dsonar.test.inclusions=**/*_test.go
+      -Dsonar.test.exclusions=**/vendor/**
+      -Dsonar.go.tests.reportPaths=report.json
+      -Dsonar.go.coverage.reportPaths=coverage.out
+  dependencies:
+    - analysis
+  only:
+    - master

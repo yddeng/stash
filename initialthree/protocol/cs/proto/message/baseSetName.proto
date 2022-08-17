@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message baseSetName_toS {
+    optional string name = 1;
+}
+
+message baseSetName_toC {}

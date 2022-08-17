@@ -1,0 +1,17 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message enterMap_toS {
+	optional int32    mapID   = 1;
+}
+
+message enterMap_toC {
+	required int32    mapID   = 1;
+	required Position pos     = 2;
+	required int32    angle   = 3;
+	required int32    scene   = 4;
+	required uint32   mapLogic   = 5;
+}

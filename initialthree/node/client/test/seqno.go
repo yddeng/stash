@@ -1,0 +1,61 @@
+package main
+
+import (
+	"fmt"
+	"github.com/golang/protobuf/proto"
+	fnet "github.com/sniperHW/flyfish/pkg/net"
+	codecs "initialthree/codec/cs"
+	"initialthree/node/client/dispatcher"
+	"initialthree/node/client/login"
+	"initialthree/protocol/cmdEnum"
+	cs_msg "initialthree/protocol/cs/message"
+	"os"
+)
+
+func main() {
+
+	if len(os.Args) < 3 {
+		fmt.Printf("usage addr userID\n")
+		return
+	}
+
+	addr := os.Args[1]
+	userID := os.Args[2]
+
+	login.Login(userID, addr, func(lSession *login.Session, d *dispatcher.Dispatcher, msg *codecs.Message, err error) {
+		if nil != err {
+			fmt.Println(err)
+		} else {
+
+			data := msg.GetData().(*cs_msg.GameLoginToC)
+			if data.GetIsFirstLogin() {
+				_ = lSession.Send(&cs_msg.CreateRoleToS{
+					Name: proto.String(userID),
+				})
+			} else {
+				repeatedGM(lSession)
+			}
+
+			d.Register(cmdEnum.CS_CreateRole, func(session *fnet.Socket, msg *codecs.Message) {
+
+				data := msg.GetData().(*cs_msg.CreateRoleToC)
+				fmt.Println("CreateRoleToC", data)
+
+				repeatedGM(lSession)
+			})
+
+		}
+	})
+
+	sigStop := make(chan bool)
+	_, _ = <-sigStop
+}
+
+func repeatedGM(lSession *login.Session) {
+	lSession.Send(&cs_msg.GameMasterToS{
+		Type:  proto.Int32(int32(2)),
+		ID:    proto.Int32(int32(3)),
+		Count: proto.Int32(int32(5)),
+	})
+
+}

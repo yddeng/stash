@@ -1,0 +1,47 @@
+WORK_DIR = ./bin
+
+GOARCH = amd64
+
+EXCEL_PATH = "/Users/yangyang/go/src/initialthree/node/configs/Excel"
+QUEST_PATH = "/Users/yangyang/go/src/initialthree/node/configs/quest"
+
+SERVICE = 10.128.2.104:9201
+
+mac:
+	GOOS=darwin GOARCH=${GOARCH} go build -o ${WORK_DIR}/bin/robot ./main/main.go
+
+linux:
+	GOOS=linux GOARCH=${GOARCH} go build -o ${WORK_DIR}/bin/robot ./main/main.go
+
+windows:
+	GOOS=windows GOARCH=${GOARCH} go build -o ${WORK_DIR}/bin/robot.exe ./main/main.go
+
+copy_config:
+	test -d ${WORK_DIR}/config || mkdir -p ${WORK_DIR}/config 
+	test -f ${WORK_DIR}/config/config.toml || \
+		go run ./config/tool/modify.go ./config/tool/flag.go \
+			-service=${SERVICE} \
+			-excel-path=${EXCEL_PATH} \
+			-quest-path=${QUEST_PATH} \
+			-behavior-tree=${BEV_TREE} \
+			-statistics-output-file=./statistics.txt \
+			./config/config.toml.template ${WORK_DIR}/config/config.toml 
+	test -d ${WORK_DIR}/config/behavior || cp -r config/behavior ${WORK_DIR}/config/
+
+copy_shell:
+	test -f ${WORK_DIR}/start.sh || cp ./start.sh.template ${WORK_DIR}/start.sh
+	test -f ${WORK_DIR}/stop.sh || cp ./stop.sh.template ${WORK_DIR}/stop.sh
+
+mac_zip: mac copy_config copy_shell
+	cd ${WORK_DIR}; tar -acvf robot_mac.tar bin/robot config start.sh stop.sh
+
+linux_zip: linux copy_config copy_shell
+	cd ${WORK_DIR}; tar -acvf robot_linux.tar bin/robot config start.sh stop.sh
+
+windows_zip: windows copy_config
+	test -f ${WORK_DIR}/start.bat || cp ./start.bat.template ${WORK_DIR}/start.bat
+	cd ${WORK_DIR}; tar -acvf robot_windows.tar bin/robot.exe config start.bat 
+
+run: copy_config
+	go build -o ${WORK_DIR}/bin/robot main/main.go
+	cd ${WORK_DIR}; ./bin/robot ./config/config.toml

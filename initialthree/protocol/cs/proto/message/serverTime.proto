@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message serverTime_toS {}
+
+message serverTime_toC {
+    optional int64 physTime     = 1;
+}

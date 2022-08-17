@@ -1,0 +1,12 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/backpack.proto";
+
+message backpackSync_toS {}
+
+message backpackSync_toC {
+    optional bool           all         = 1;    // 是否全部物品数据
+    repeated backpackEntity entities    = 2;    // 物品
+}

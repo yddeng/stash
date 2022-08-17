@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message talentLevelUp_toS {
+    optional bool infiniteTalent = 1; // 是否是特殊天赋升级，其没有ID
+    optional int32 talentID  = 2;
+}
+
+message talentLevelUp_toC {}

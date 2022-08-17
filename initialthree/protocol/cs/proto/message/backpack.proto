@@ -1,0 +1,12 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+// 背包格子
+message backpackEntity {
+    optional int32  tid         = 1;    // 物品id
+    optional uint32 id          = 2;    // 唯一id
+    optional int32  count       = 3;    // 数量，0 代表道具用光或被删除
+    optional int64  expireTime  = 4;    // 到期时间，如果有时间限制
+    optional int64  acquireTime = 5;    // 获取时间
+}

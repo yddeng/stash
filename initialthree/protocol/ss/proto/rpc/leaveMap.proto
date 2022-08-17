@@ -1,0 +1,13 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message leaveMap_req {
+	optional int32  sceneIdx = 1;
+	optional string userID   = 2;
+	optional uint64 roleID   = 3;
+}
+
+message leaveMap_resp {
+	optional bool  ok     = 1;
+}

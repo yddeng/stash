@@ -1,0 +1,17 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message worldQuestSync_toS {}
+
+message worldQuestSync_toC {
+    required  bool     isAll = 1;
+    repeated worldQuest worldQuests  = 2; // 当前的世界任务，已剔除完成任务。长度为三
+    optional  int32     refreshTimes = 3;
+    optional  int32     doneTimes    = 4;
+}
+
+message worldQuest{
+    optional int32 questID = 1;
+    optional bool  done = 2;
+}

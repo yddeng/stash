@@ -1,0 +1,7 @@
+syntax = "proto2";
+package ssmessage;
+option go_package = "initialthree/protocol/ss/ssmessage";
+
+message firewallUpdate {
+    optional int64 version = 1;
+}

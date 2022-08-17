@@ -1,0 +1,16 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message signSync_toS {}
+
+message signSync_toC {
+    required  bool  isAll = 1;
+    repeated  sign  signList = 2; // 只记录已经签到过
+}
+
+message sign{
+    optional int32 id        = 1;
+    optional int32 signTimes = 2; // 已签到次数
+    optional int64 lastSignTime = 3; // 上次签到时间
+}

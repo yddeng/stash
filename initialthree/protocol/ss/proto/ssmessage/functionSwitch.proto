@@ -1,0 +1,9 @@
+syntax = "proto2";
+package ssmessage;
+option go_package = "initialthree/protocol/ss/ssmessage";
+
+message functionSwitch {
+    optional int32  type    = 1;    // type, 1 for module, 2 for message.
+    optional string name    = 2;    //
+    optional bool   on      = 3;    //
+}

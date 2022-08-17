@@ -1,0 +1,30 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message scarsIngrainSync_toS {}
+
+message scarsIngrainSync_toC {
+    repeated scarsIngrain scarsIngrainGroup = 1;
+    required int32        currentID         = 2;
+    optional int32        totalScore        = 3; // 本周累积讨伐值
+    repeated scarsIngrainBoss bossGroup     = 4; // 自己挑战的boss解锁难度
+    optional int32        currentRankId     = 5;
+    repeated int32        scoreRewardGet    = 6; // 已经领取的讨伐值奖励
+}
+
+message scarsIngrain {
+    required int32  scarsIngrainID = 1; // 对应到配置的ID
+    required int32  rankID         = 2; // 战区对应的排行榜ID
+    repeated int32  bossIDs        = 3; // 战区开发的bossID
+}
+
+
+message scarsIngrainBoss{
+    required int32  bossID         = 1;
+    required int32  challengeID    = 2;
+    repeated int32  difficultScore = 3; // 难度对应的分数，有几条数据表示解锁到几
+    repeated int32  defendCharacterList = 4; // 驻守队伍
+    repeated int32  prefabCharacterList = 5; // 预设队伍
+    optional bool   opened         = 6; // 当前boss是否解锁
+}

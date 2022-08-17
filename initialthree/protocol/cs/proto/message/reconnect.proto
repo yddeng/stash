@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message reconnect_toS {
+	required string userID = 1;
+	required string token  = 2;	
+}
+
+message reconnect_toC {
+}

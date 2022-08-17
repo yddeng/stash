@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message echo_toS {
+	required string msg = 1;
+}
+
+message echo_toC {
+	required string msg = 2;
+}

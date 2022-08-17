@@ -1,0 +1,45 @@
+/*
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message announcement_toS {
+    optional int64 version = 1; // 首次拉取填0，后续携带之前下发的 version。 有变化才会下发
+}
+
+message announcement{
+    optional int32  id    = 1;
+    optional string type  = 2;
+    optional string title = 3;
+    optional string smallTitle = 4;
+    optional int64  startTime  = 5;
+    optional int64  expireTime = 6;
+    optional bool   remind     = 7; // 强行弹出
+    repeated announcementContent content = 8;
+
+}
+
+message announcementContent{
+    optional string type    = 1; // 0 图片 1文本
+    optional int32  imageSkip   = 2;
+    optional string text     = 3;
+    optional string image    = 4;
+}
+
+message announcement_toC {
+    optional int64 version = 1;
+    repeated announcement announcements= 2;
+}
+*/
+
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message announcement_toS {
+    required string userID = 1;
+}
+
+message announcement_toC {
+    optional string announcement = 1;
+}

@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message teamJoinReplyNotify_toS {}
+
+message teamJoinReplyNotify_toC {
+    optional uint32 teamID = 1;
+    optional bool agree = 2;
+}

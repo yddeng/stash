@@ -1,0 +1,18 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message scarsIngrainSaveScore_toS {
+    required int32  scoreID = 1; // 需要保存的分数ID
+    required bool   isSave  = 2;
+}
+
+message scarsIngrainSaveScore_toC {
+    optional int32   score          = 1;    // 分数
+    repeated Award   dropAwards     = 2;    // 掉落奖励,根据倍率产生多个
+    optional int32   rank      = 3; // 精确排名, 0 为没有自己的排名数据
+    optional int32   total     = 4;
+    optional int32   percent   = 5; // 百分比排名
+}

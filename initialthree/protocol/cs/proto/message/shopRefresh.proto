@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message shopRefresh_toS {
+    required int32 shopID = 1;
+}
+
+message shopRefresh_toC {}

@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message battleResurrect_toS {}
+
+message battleResurrect_toC {
+    optional int32 effectID = 1; // 复活效果
+}

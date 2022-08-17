@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/characterTeamPrefabSet.proto";
+
+message characterTeamPrefabSync_toS {}
+
+message characterTeamPrefabSync_toC {
+    repeated characterTeamPrefab characterTeamPrefabs = 1; // 编队预设，返回长度为
+}

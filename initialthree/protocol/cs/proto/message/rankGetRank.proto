@@ -1,0 +1,15 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message rankGetRank_toS {
+    required int32  rankID  = 1; // 排行榜ID
+}
+
+message rankGetRank_toC {
+    optional int32     rank     = 1; // 0 为没有自己的排名数据
+    optional int32     total    = 2; // 排行榜总人数
+    optional int32     rankID   = 3;
+    optional int32     percent  = 4; // 百分比排名
+    optional int32     score    = 5;
+}

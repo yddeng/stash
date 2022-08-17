@@ -1,0 +1,16 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+import "cs/proto/message/rankGetTopList.proto";
+
+message rankGetTopList_req {
+    required  message.rankGetTopList_toS tos = 1;
+    required uint64 roleID = 2;
+}
+
+message rankGetTopList_resp {
+    optional  string  redirectRankAddr  = 1; // 获取排行榜时，排行榜信息不在当前服务节点，重定向实例的服务节点。
+    optional  int32   curRankID         = 2;
+    optional  message.rankGetTopList_toC toc = 3;
+}

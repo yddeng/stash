@@ -1,0 +1,33 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message rankGetTopList_toS {
+    required int32  version = 1; // 排行榜版本号，强行获取数据时填0。对比版本号，若版本号与服务器一致，则没有数据
+    required int32  rankID  = 2; // 排行榜ID
+    optional bool   getLast = 3; // 上一期排行数据？
+}
+
+message rankGetTopList_toC {
+    required int32        version  = 1; // 返回服务器最新版本号。 若与请求的version值一致，则没有数据
+    optional RankInfo     rankInfo = 2;
+    repeated RankRoleInfo roles    = 3; // 数组顺序为排名
+    optional int32        rank     = 4; // 0 为没有自己的排名数据
+    optional int32        total    = 5; // 总人数
+    optional int32        percent  = 6; // 百分比排名
+}
+
+message RankInfo {
+    optional int32  RankID = 1;
+    optional int64  BeginTime = 2; // 开始时间，时间戳（秒）
+    optional int64  EndTime   = 3; // 结束时间
+}
+
+message RankRoleInfo {
+    optional uint64  ID = 1;
+    optional string name = 2;
+    optional int32  level = 3;
+    optional int32  score = 4;
+    repeated int32  characterList = 5;
+    optional int32  avatar = 6; //头像ID
+}

@@ -1,0 +1,71 @@
+# 模板文件，正式文件把template去掉
+[Common]
+centerAddr     	= ["localhost:40500"]
+bdType          = "solo"  # solo , cluster
+dbConfig      	= ["flyfish@dir@localhost:10050","flyfish@login@localhost:10050","flyfish@game@localhost:10050","flyfish@global@localhost:10050", "flyfish@nodelock@localhost:10050"]
+serverGroups    = [1]  # 服务的群组
+cfgPathRoot     = "./configs"
+excelPath       = "Excel"
+wordsFilterPath     = "WordsFilter/wordsFilter.txt"
+
+[Log]
+path            = "log"
+level           = "debug"
+maxSize         = 100
+maxAge          = 14
+maxBackups      = 10
+enableLogStdout = false
+
+[[Dir]]
+dbQueryMax      = 512     # 数据库允许同时最大查询数
+logicAddr		= "1.1.1"
+clusterAddr    	= "localhost:40501"
+externalAddr   	= "localhost:40101"
+ [[Dir.Servers]]
+ serverID   = 1
+ serverName = "服务列表1"
+
+[[Login]]
+logicAddr		= "1.2.1"
+clusterAddr    	= "localhost:40503"
+externalAddr   	= "localhost:40505"
+
+[[Gate]]
+logicAddr		= "1.3.1"
+clusterAddr    	= "localhost:40504"
+externalAddr   	= "localhost:40506"
+
+[[Game]]
+logicAddr		= "1.4.1"
+clusterAddr    	= "localhost:40507"
+
+[[World]]
+logicAddr		= "1.5.1"   # 逻辑地址第三位为地图ID
+clusterAddr    	= "localhost:40509"
+
+[[Map]]
+logicAddr		= "1.6.1"
+clusterAddr    	= "localhost:40510"
+worldAddr       = "1.5.1"      # 所属的worldID
+
+[[Team]]
+logicAddr		= "1.7.1"
+clusterAddr    	= "localhost:40511"
+
+
+[[WebService]]
+logicAddr		= "1.8.1"
+clusterAddr    	= "localhost:40516"
+webAddress      = "localhost:41801"
+accessToken     = ""
+
+[[Rank]]
+  logicAddr       = "1.14.1"
+  clusterAddr     = "localhost:40508"
+  SqlType         = "pgsql"
+  DbHost          = "127.0.0.1"
+  DbPort          = 5432
+  DbUser		  = "dbuser"
+  DbPassword      = "123456"
+  DbDataBase      = "yidongdeng"
+

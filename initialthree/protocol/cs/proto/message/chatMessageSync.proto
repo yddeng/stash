@@ -1,0 +1,16 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message chatMessageSync_toS {
+
+}
+
+message chatMessageSync_toC {
+    optional string userID = 1;
+    optional uint64 gameID = 2;
+    optional string name   = 3;
+    optional int32  Portrait = 4;
+    optional int32  PortraitFrame = 5; //头像框
+    optional string message = 6;
+}

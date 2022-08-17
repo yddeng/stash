@@ -1,0 +1,18 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+import "cs/proto/message/rankGetTopList.proto";
+
+message rankSetScore_req {
+    optional message.RankRoleInfo roleInfo = 1;
+    required int32   rankID = 2;
+    required uint64  roleID    = 3;
+    required int32   score     = 4;
+}
+
+message rankSetScore_resp {
+    required int32 code   = 1; // 0 继续尝试，1 成功 2 失败
+    optional int32 rank   = 3; // 0 为没有自己的排名数据
+    optional int32 total  = 2;
+}

@@ -1,0 +1,82 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+enum TeamEnum
+{
+	NO_TEAM       = 1;
+	MAXROLECOUNT  = 2;
+	AGREED        = 3;
+	DISAGREE      = 4; 
+	JOINOTHERTEAM = 5;
+	OFF_LINE      = 6;
+	IN_BATTLE     = 7;
+}
+
+message viewObj {
+	optional string userID     = 1;
+	optional uint64 roleID     = 2;
+	optional string Name       = 3;
+	optional int32  Level      = 4;
+	optional Position pos      = 5;
+	optional int32  Angle      = 6;
+}
+
+message Attr {
+	optional int32 id  = 1;
+	optional int64 val = 2;
+	optional int64 NextRefreshTime = 3;
+}
+
+message BattleAttr {
+	optional int32  id  = 1;
+	optional double val = 2;
+}
+
+
+message Position {
+	optional int32 x       = 1;
+	optional int32 y       = 2;
+	optional int32 z       = 3;
+}
+
+
+message Vector3D {
+	optional int32 x       = 1;
+	optional int32 y       = 2;
+	optional int32 z       = 3;	
+}
+
+
+message AwardInfo {
+	optional  int32  Type   = 1;
+	optional  int32  ID          = 2;
+	optional  int32  Count       = 3;
+	optional  uint32 InsID       = 4;  // 实例ID，仅weapon，equip 设置，且设置时 count 为 1。
+}
+
+message Award {
+	repeated AwardInfo AwardInfos = 1;
+}
+
+message CostItem {
+	optional int32 ItemID = 1;
+	optional int32 Count  = 2;
+}
+
+message Skill{
+	optional int32 skillID = 1;
+	optional int32 level = 2;
+}
+
+message Mail {
+	optional string title = 1;
+	optional string sender = 2;
+	optional int64  createTime = 3;
+	optional int64  expireTime = 4;
+	optional string content    = 5;
+	optional Award  awards     = 6; // 附件
+	optional bool   read       = 7; // 已读
+	required uint32 id         = 8;
+    optional bool   deleted    = 9;
+}

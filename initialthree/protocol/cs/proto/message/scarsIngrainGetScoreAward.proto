@@ -1,0 +1,13 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message scarsIngrainGetScoreAward_toS {
+    required int32 score = 1; // 获取的分数奖励
+}
+
+message scarsIngrainGetScoreAward_toC {
+    required Award  award     = 1;
+}

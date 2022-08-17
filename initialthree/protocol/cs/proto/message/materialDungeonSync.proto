@@ -1,0 +1,14 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message materialDungeonSync_toS {}
+
+message materialDungeonSync_toC {
+    optional bool              all         = 1;
+    repeated materialDungeon   materialDungeons    = 2;
+}
+
+message materialDungeon{
+    optional int32  dungeonID   = 1;    // ID
+}

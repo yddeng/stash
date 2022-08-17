@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message equipEquip_toS {
+    required int32  characterID  = 1;
+    required uint32 equipID  = 2;
+    required int32  position = 3;
+}
+
+message equipEquip_toC {}

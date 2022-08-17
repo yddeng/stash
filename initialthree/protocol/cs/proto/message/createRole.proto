@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message createRole_toS {
+    optional string name = 1;
+    optional int32  sex  = 2;
+}
+
+message createRole_toC {}

@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message scarsIngrainTeamPrefabSet_toS {
+    optional int32 bossID = 1;
+    repeated int32 characterList = 2;
+}
+
+message scarsIngrainTeamPrefabSet_toC {}

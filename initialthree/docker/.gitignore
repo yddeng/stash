@@ -1,0 +1,10 @@
+flyfish/*.toml
+flyfish/*.json
+flyfish/flypd
+flyfish/flykv
+flyfish/flygate
+
+
+initialthree/bin/
+initialthree/configs/
+initialthree/*.toml

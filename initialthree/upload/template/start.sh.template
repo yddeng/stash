@@ -1,0 +1,12 @@
+#!/bin/sh
+# 参数说明：程序相对路径，配置文件路径，服务器类型，以数组中某索引配置启动，initialthree 识别符号>。
+
+nohup ./bin/center localhost:40500 initialthree > /dev/null 2> center.log &
+nohup ./bin/node_dir config.toml Dir 0 initialthree > /dev/null 2> node_dir.log &
+nohup ./bin/node_gate config.toml Gate 0 initialthree > /dev/null 2> node_gate.log &
+nohup ./bin/node_login config.toml Login 0 initialthree > /dev/null 2> node_login.log &
+#nohup ./bin/node_game config.toml Game 0 initialthree pprof@0.0.0.0:41234 prometheus@0.0.0.0:40920 > /dev/null 2> node_game.log &
+nohup ./bin/node_game config.toml Game 0 initialthree > /dev/null 2> node_game.log &
+nohup ./bin/node_webservice config.toml WebService 0 initialthree > /dev/null 2> node_webservice.log &
+nohup ./bin/node_rank config.toml Rank 0 initialthree > /dev/null 2> node_rank.log &
+#nohup ./bin/node_conflictzone config.toml ConflictZone 0 initialthree > /dev/null 2> node_confliczone.log &

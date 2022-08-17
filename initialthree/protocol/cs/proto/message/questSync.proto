@@ -1,0 +1,29 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message questSync_toS {}
+
+message questSync_toC {
+    required bool    isAll     = 1;
+    repeated Quest   Quests    = 2;
+}
+
+
+message QuestCondition {
+    optional int32 DoneTimes  = 1; // 已完成数量
+    optional bool  Complete   = 2; // 该条件是否已经完成
+}
+
+message Quest {
+    required int32          questID        = 1; // 任务 id
+    required QuestState     State          = 3; // 任务状态
+    repeated QuestCondition QuestConditions  = 4;
+}
+
+
+enum QuestState{
+    Running      = 1; // 正在执行
+    Finished     = 2; // 任务结束待领奖
+    End          = 3; // 任务完结
+}

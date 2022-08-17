@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message baseSetSex_toS {
+    optional int32 sex = 1;
+}
+
+message baseSetSex_toC {}

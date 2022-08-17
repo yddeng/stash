@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message rewardQuestComplete_toS {
+    required int32 questID = 1;
+}
+
+message rewardQuestComplete_toC {}

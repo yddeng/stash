@@ -1,0 +1,11 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message getLogicTime_req {}
+
+message getLogicTime_resp {
+    optional int64  logicStartTime      = 1;    // server logic start time.
+    optional int64  physStartTime       = 2;    // server physical start time.
+    optional int64  physCumulIntrTime   = 3;    // server physical cumulative interruption time.
+}

@@ -1,0 +1,19 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+import "ss/proto/rpc/common.proto";
+
+message move_req {
+	optional int32    mapID   = 1;
+	optional int32    sceneIdx = 2;
+	optional string   userID  = 3;
+	optional uint64   roleID  = 4;
+	optional position pos     = 5;
+	optional int32    angle   = 6;
+}
+
+message move_resp {
+	optional bool     ok    = 1;
+	optional position pos   = 2;	
+	optional int32    angle  = 3;	
+}

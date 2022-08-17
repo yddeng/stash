@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/team.proto";
+
+message teamJoinApplyNotify_toS {}
+
+message teamJoinApplyNotify_toC {
+    optional TeamPlayer player 	= 1;
+}

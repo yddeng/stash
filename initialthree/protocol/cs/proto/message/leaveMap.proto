@@ -1,0 +1,17 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message leaveMap_toS {
+	optional int32    ReqMapID    = 1;
+	optional Position ReqPosition = 2;
+	optional int32    ReqAngle    = 3;
+}
+
+message leaveMap_toC {
+	optional int32    mapID    = 1;
+	optional Position position = 2;
+	optional int32    angle    = 3;
+}

@@ -1,0 +1,25 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message equipSync_toS {}
+
+message equipSync_toC {
+    required  bool     isAll = 1;
+    repeated  equip   equips = 2;
+    required  int32   useCap = 3;
+}
+
+message equip{
+    required uint32 ID = 1;
+    optional int32 ConfigID = 2;
+    optional int32 level = 3;
+    optional int32 exp = 4;
+    optional int32 randomAttribId = 11; //随机属性ID，位置1
+    repeated int32 refineLevel = 5; // 精炼等级，对应到技能索引
+    optional int32 equipCharacterID = 6; // 装备的角色ID
+    optional bool  isLock = 8;
+    optional bool  isRemove = 9;
+    optional int64 getTime  = 10; //获取时间戳，秒
+
+}

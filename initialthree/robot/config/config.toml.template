@@ -1,0 +1,36 @@
+Service = "127.0.0.1:9201"
+ServerID = 1
+TickCycle = 1000
+
+[Robot]
+  Count = 100
+  UserIDPrefix = "robot_"
+  InitialNo = 1
+
+[Resource]
+  ExcelPath = "./config/excel"
+  QuestPath = "./config/quest"
+  BehaviorConfigPath = "./config/behavior/config.xml"
+  BehaviorTree = "bevtree-comp.xml"
+
+[DisconnectTest]
+  Enable = true
+  Interval = 300
+  Count = 10
+
+[Statistics]
+  OutputInterval = 60
+  OutputFile = "./statistics.txt"
+  MetricsPort = 2112
+
+[PProf]
+  Enable = false
+  Port = 2222
+
+[Log]
+  Dir = "./log"
+  Level = "debug"
+  EnableStdOut = false
+  MaxSize = 100
+  MaxAge = 14
+  MaxBackups = 0

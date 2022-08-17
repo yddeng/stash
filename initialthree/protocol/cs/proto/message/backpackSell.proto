@@ -1,0 +1,15 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+
+message backpackSellEntity {
+    optional uint32 id      = 1; // 物品ID
+    optional int32  count   = 2; // 出售数量
+}
+
+message backpackSell_toS {
+    repeated backpackSellEntity sellEntities = 1;    // 准出售的物品ID
+}
+
+message backpackSell_toC {}

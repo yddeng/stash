@@ -1,0 +1,14 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message move_toS {
+	optional Position pos    = 1;
+	optional int32    angle  = 2;
+}
+
+message move_toC {
+	
+}

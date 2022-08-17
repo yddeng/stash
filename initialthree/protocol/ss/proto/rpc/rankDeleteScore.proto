@@ -1,0 +1,12 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message rankDeleteScore_req {
+    required uint64  roleID    = 1;
+    required int32   rankID    = 2;
+}
+
+message rankDeleteScore_resp {
+    required bool ok = 1;
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message weaponDecompose_toS {
+    repeated uint32 weaponIDs  = 1;
+}
+
+message weaponDecompose_toC {}

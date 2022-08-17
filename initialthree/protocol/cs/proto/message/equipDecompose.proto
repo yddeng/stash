@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message equipDecompose_toS {
+    repeated uint32  equipID  = 1;
+}
+
+message equipDecompose_toC {}

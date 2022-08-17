@@ -1,0 +1,78 @@
+package main
+
+import (
+	"fmt"
+	"github.com/golang/protobuf/proto"
+	fnet "github.com/sniperHW/flyfish/pkg/net"
+	codecs "initialthree/codec/cs"
+	"initialthree/node/client/dispatcher"
+	"initialthree/node/client/login"
+	"initialthree/protocol/cmdEnum"
+	cs_msg "initialthree/protocol/cs/message"
+	"os"
+)
+
+func main() {
+
+	if len(os.Args) < 3 {
+		fmt.Printf("usage addr userID\n")
+		return
+	}
+
+	addr := os.Args[1]
+	userID := os.Args[2]
+
+	login.Login(userID, addr, func(lSession *login.Session, d *dispatcher.Dispatcher, msg *codecs.Message, err error) {
+		if nil != err {
+			fmt.Println(err)
+		} else {
+			data := msg.GetData().(*cs_msg.GameLoginToC)
+			if data.GetIsFirstLogin() {
+				_ = lSession.Send(&cs_msg.CreateRoleToS{
+					Name: proto.String(userID),
+				})
+			} else {
+				quest(lSession)
+			}
+
+			d.Register(cmdEnum.CS_CreateRole, func(session *fnet.Socket, msg *codecs.Message) {
+
+				data := msg.GetData().(*cs_msg.CreateRoleToC)
+				fmt.Println("CreateRoleToC", data)
+				quest(lSession)
+			})
+
+			d.Register(cmdEnum.CS_QuestComplete, func(session *fnet.Socket, msg *codecs.Message) {
+
+				data := msg.GetData().(*cs_msg.QuestCompleteToC)
+				fmt.Println("QuestCompleteToC", data)
+
+			})
+
+			d.Register(cmdEnum.CS_QuestSync, func(session *fnet.Socket, msg *codecs.Message) {
+
+				data := msg.GetData().(*cs_msg.QuestSyncToC)
+				fmt.Println("QuestSyncToC", data)
+
+			})
+
+		}
+	})
+
+	sigStop := make(chan bool)
+	_, _ = <-sigStop
+}
+
+func quest(lSession *login.Session) {
+	go func() {
+
+		fmt.Println("input complete: id ")
+		var id int
+		fmt.Scan(&id)
+		req := &cs_msg.QuestCompleteToS{
+			QuestID: []int32{int32(id)},
+		}
+		lSession.Send(req)
+
+	}()
+}

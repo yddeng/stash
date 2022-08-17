@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message baseSetSignature_toS {
+    optional string signature = 1;
+}
+
+message baseSetSignature_toC {}

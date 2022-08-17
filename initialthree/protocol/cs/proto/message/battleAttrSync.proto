@@ -1,0 +1,16 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message battleAttrSync_toS {}
+
+message battleAttrSync_toC {
+    required bool isAll = 1;
+    repeated BattleAttrSlice battleAttrSlice = 2; // 包含3个切片，对应编队的123。
+}
+
+message BattleAttrSlice{
+    repeated BattleAttr battleAttrs = 1;
+}

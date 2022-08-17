@@ -1,0 +1,15 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message backpackRemEntity {
+    optional int32   type    = 1; // 移除类型, 1 过期移除, 2 常规移除
+    optional uint32  id      = 2; // 物品ID
+    optional int32   count   = 3; // 数量
+}
+
+message backpackRem_toS {
+    repeated backpackRemEntity remEntities = 1; // 需要删除的物品
+}
+
+message backpackRem_toC {}

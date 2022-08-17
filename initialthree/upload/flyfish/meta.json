@@ -1,0 +1,1142 @@
+{
+  "Version": 1,
+  "TableDefs": [
+    {
+      "Name": "game_user",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "id",
+          "Type": "int",
+          "DefaultValue": "0"
+        }
+      ]
+    },
+    {
+      "Name": "user_game_login",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "gameaddr",
+          "Type": "string"
+        }
+      ]
+    },
+    {
+      "Name": "role_name",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "owner",
+          "Type": "string"
+        }
+      ]
+    },
+    {
+      "Name": "user_dir_last_login",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "lastlogin",
+          "Type": "int",
+          "DefaultValue": "0"
+        }
+      ]
+    },
+    {
+      "Name": "user_module_data",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "attr",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "attr_time",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "mapdata",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "base",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "rankdata",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "character",
+      "Fields": [
+        { "TabVersion": 1, "Name": "slot0", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot1", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot2", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot3", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot4", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot5", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot6", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot7", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot8", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot9", "Type": "blob"},
+        {
+          "TabVersion": 1,
+          "Name": "group_default",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "function_switch",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "modules",
+          "Type": "string"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "messages",
+          "Type": "string"
+        }
+      ]
+    },
+    {
+      "Name": "global_data",
+      "Fields": [
+        {"TabVersion": 1, "Name": "data", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "quest",
+      "Fields": [
+        {"TabVersion": 1, "Name": "timedata", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot0", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot1", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot2", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot3", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot4", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot5", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot6", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot7", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot8", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot9", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "user_assets",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "assets",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "backpack",
+      "Fields": [
+        { "TabVersion": 1, "Name": "slot0", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot1", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot2", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot3", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot4", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot5", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot6", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot7", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot8", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot9", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "equip",
+      "Fields": [
+        { "TabVersion": 1, "Name": "slot0", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot1", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot2", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot3", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot4", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot5", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot6", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot7", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot8", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot9", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "weapon",
+      "Fields": [
+        { "TabVersion": 1, "Name": "slot0", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot1", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot2", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot3", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot4", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot5", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot6", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot7", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot8", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot9", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "mail",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "data",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "status",
+          "Type": "blob"
+        },
+        { "TabVersion": 1, "Name": "slot0", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot1", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot2", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot3", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot4", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot5", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot6", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot7", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot8", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot9", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "main_dungeons",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "chapter0",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "chapter1",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dungeon0",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dungeon1",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dungeon2",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dungeon3",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dungeon4",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dungeon5",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dungeon6",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dungeon7",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "drawcard",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "history",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "guarantee",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "poolindex",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "dailytimes",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "timedata",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "scarsingrain",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "sidata",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "daily_times",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "role_times",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "timedata",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "high_score",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "materialdungeon",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "dungeon_data",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "rewardquest",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "base",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "data",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "timedata",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "temporary",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "level",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "seqno",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "nodelock",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "phyaddr",
+          "Type": "string"
+        }
+      ]
+    },
+    {
+      "Name": "firewall",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "add_time",
+          "Type": "int"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "update_time",
+          "Type": "int"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "prevent_times",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "Name": "whitelist",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "access_times",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "Name": "bannedlist",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "expired_time",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "Name": "shop",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "shop",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "product",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "timedata",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "worldquest",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "quest",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "reputation",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "timedata",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "shop",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "id_counter",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "counter",
+          "Type": "int"
+        }
+      ]
+    },
+    {
+      "Name": "trialdungeon",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "dungeon_data",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "trial_count",
+          "Type": "int"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "stage_reward",
+          "Type": "blob"
+        }
+      ]
+    },
+    {
+      "Name": "offlinemsg",
+      "Fields": [
+        {
+          "TabVersion": 1,
+          "Name": "item_0",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_1",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_2",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_3",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_4",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_5",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_6",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_7",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_8",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_9",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_10",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_11",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_12",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_13",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_14",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_15",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_16",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_17",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_18",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_19",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_20",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_21",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_22",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_23",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_24",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_25",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_26",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_27",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_28",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_29",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_30",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_31",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_32",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_33",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_34",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_35",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_36",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_37",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_38",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_39",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_40",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_41",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_42",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_43",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_44",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_45",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_46",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_47",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_48",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_49",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_50",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_51",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_52",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_53",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_54",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_55",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_56",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_57",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_58",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_59",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_60",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_61",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_62",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_63",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_64",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_65",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_66",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_67",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_68",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_69",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_70",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_71",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_72",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_73",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_74",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_75",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_76",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_77",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_78",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_79",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_80",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_81",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_82",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_83",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_84",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_85",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_86",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_87",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_88",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_89",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_90",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_91",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_92",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_93",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_94",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_95",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_96",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_97",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_98",
+          "Type": "blob"
+        },
+        {
+          "TabVersion": 1,
+          "Name": "item_99",
+          "Type": "blob"
+        }                                                                                                
+      ]
+    },
+    {
+      "Name": "web_data",
+      "Fields": [
+        { "TabVersion": 1, "Name": "slot0", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot1", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot2", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot3", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot4", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot5", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot6", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot7", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot8", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot9", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot10", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot11", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot12", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot13", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot14", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot15", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot16", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot17", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot18", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot19", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot20", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot21", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot22", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot23", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot24", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot25", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot26", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot27", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot28", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot29", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot30", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot31", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot32", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot33", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot34", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot35", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot36", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot37", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot38", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot39", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot40", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot41", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot42", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot43", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot44", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot45", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot46", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot47", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot48", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot49", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot50", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot51", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot52", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot53", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot54", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot55", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot56", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot57", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot58", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot59", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot60", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot61", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot62", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot63", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot64", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot65", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot66", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot67", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot68", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot69", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot70", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot71", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot72", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot73", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot74", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot75", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot76", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot77", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot78", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot79", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot80", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot81", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot82", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot83", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot84", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot85", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot86", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot87", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot88", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot89", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot90", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot91", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot92", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot93", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot94", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot95", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot96", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot97", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot98", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot99", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "sign",
+      "Fields": [
+        { "TabVersion": 1, "Name": "data", "Type": "blob"},
+        { "TabVersion": 1, "Name": "timedata", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "bigsecret",
+      "Fields": [
+        { "TabVersion": 1, "Name": "pass", "Type": "blob"},
+        { "TabVersion": 1, "Name": "weakness", "Type": "blob"},
+        {"TabVersion": 1, "Name": "data", "Type": "blob"},
+        {"TabVersion": 1, "Name": "shop", "Type": "blob"},
+        {"TabVersion": 1, "Name": "timedata", "Type": "blob"}
+      ]
+    },
+    {
+      "Name": "talent",
+      "Fields": [
+        { "TabVersion": 1, "Name": "slot0", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot1", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot2", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot3", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot4", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot5", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot6", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot7", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot8", "Type": "blob"},
+        { "TabVersion": 1, "Name": "slot9", "Type": "blob"},
+        { "TabVersion": 1, "Name": "infinite", "Type": "blob"}
+      ]
+    }
+  ]
+}

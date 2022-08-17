@@ -1,0 +1,20 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/characterSync.proto";
+import "cs/proto/message/battleAttrSync.proto";
+
+message levelFight_toS {
+    required int32      dungeonID         = 1;  // 关卡ID，配置表 dungeon 中的ID
+    required characterTeam characterTeam  = 2;  // 角色队伍
+    optional int32      multiple          = 3;  // 材料副本倍率
+}
+
+message levelFight_toC {
+    required int64           fightID         = 1; // 战斗ID
+    required characterTeam   characterTeam   = 2; // 角色队伍
+    repeated BattleAttrSlice battleAttrSlice = 3; // 包含3个切片，对应编队的123。
+    required int64           startTime       = 4; // 开始时间
+    optional int32           comboSkill      = 5; // 连携技
+}

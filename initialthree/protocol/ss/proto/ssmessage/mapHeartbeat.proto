@@ -1,0 +1,10 @@
+syntax = "proto2";
+package ssmessage;
+option go_package = "initialthree/protocol/ss/ssmessage";
+
+message mapHeartbeat {
+    optional int32    mapID   = 1;
+    optional int32    sceneIdx = 2;
+    optional string   userID  = 3;
+    optional uint64   roleID  = 4;
+}

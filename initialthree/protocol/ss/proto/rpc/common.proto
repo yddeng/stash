@@ -1,0 +1,75 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message RoleInfo {
+	required string    userID     = 1;
+	required uint64    roleID     = 2;
+	required string    game       = 3; //玩家所在game节点
+	optional int32     Face       = 4;
+	optional int32     Hair       = 5;   //发型
+	optional int32     HairColor  = 6;   //发色
+	optional int32     EyeColor   = 7;   //瞳色
+	optional int32     Outline    = 8;
+	optional string    Name       = 9;
+	optional int32     Cloth      = 10;
+	optional int32     ClothColor = 11;
+	optional int32     Level      = 12;
+	optional int32     Portrait   = 13;
+    repeated Skill     skills      = 14; //技能
+    optional Weapon    weapon1     = 15;  //武器
+    optional Weapon    weapon2     = 16;  //武器
+	optional int32     RoleType    = 17;  //1玩家 2机器人
+	optional int32     CampType    = 18;  //1红 2蓝
+	optional int32     GeneralID   = 19;  //出战武将ID
+}
+
+message Attribute {
+	optional int32 index = 1;
+	optional int32 value = 2;
+}
+
+message Skill{
+	optional int32 skillID     = 1;
+	optional int32 skillLevel  = 2;
+	optional int32 specialStar = 3;
+}
+
+message Weapon{
+    optional int32     state       = 1;
+    optional int32     weaponID    = 2;
+    repeated Attribute battleAttrs = 3; //战斗属性
+    repeated Skill     skills      = 4; //技能
+}
+
+message TeamRoleInfo {
+	required string    userID     = 1;
+	required uint64    roleID     = 2;
+	required string    game       = 3; //玩家所在game节点
+	optional int32     weapon1    = 6;
+	optional int32     weapon2    = 7;
+	optional int32     Face       = 8;
+	optional int32     Hair       = 9;   //发型
+	optional int32     HairColor  = 10;   //发色
+	optional int32     EyeColor   = 11;   //瞳色
+	optional int32     Outline    = 12;
+	optional int32     Cloth      = 13;
+	optional int32     ClothColor = 14;
+	optional int32     Portrait   = 15;
+	optional string    Name       = 16;
+	optional int32     Level      = 17;
+	optional int32     GeneralID  = 18;  //出战武将ID
+	optional int64     CE         = 19; // 战力
+
+	message General {
+		optional int32 configId = 1; // 武将配置ID
+		optional int32 status	= 2; // 武将状态
+	}
+	repeated General generals = 20; // 武将
+}
+
+message position {
+	optional int32 x       = 1;
+	optional int32 y       = 2;
+	optional int32 z       = 3;
+}

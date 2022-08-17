@@ -1,0 +1,4 @@
+Proxy = [
+	{Name="pmp",SvrAddr="212.129.131.27",SvrPort=41097},
+	{Name="sniper-ssh",SvrAddr="212.129.131.27",SvrPort=41098},
+]

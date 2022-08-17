@@ -1,0 +1,15 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+import "cs/proto/message/team.proto";
+import "cs/proto/message/errerror.proto";
+
+message teamJoinApply_req {
+    required uint32 teamID = 1;
+    required message.TeamPlayer player = 2;
+}
+
+message teamJoinApply_resp {
+    required message.ErrCode errCode = 1;
+}

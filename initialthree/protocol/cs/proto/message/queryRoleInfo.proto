@@ -1,0 +1,38 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/baseSync.proto";
+import "cs/proto/message/common.proto";
+import "cs/proto/message/characterSync.proto";
+import "cs/proto/message/equipSync.proto";
+import "cs/proto/message/weaponSync.proto";
+
+
+message queryRoleInfo_toS {
+    repeated queryRoleInfoArg queryArgs = 1; // 长度不宜超过50，防止返回数据过大
+}
+
+message queryRoleInfoArg {
+    optional string userID = 1; // 与 gameID 二选一。第一优先级，默认按照userID查询
+    optional uint64 gameID = 2; // 与 userID 二选一。第二优先级，userID为空时，按照gameID查询
+    repeated int32  attrIDs    = 3; // 要查询的属性ID
+    optional bool   queryBase    = 4; // 要查询的base属性
+    repeated int32  characterIDs = 5; // 角色ID, 如果角色上有装备、武器，返回结果中会附带
+    repeated uint32 weaponIDs    = 6; // 武器ID
+    repeated uint32 equipIDs     = 7; // 装备ID
+}
+
+message queryRoleInfo_toC {
+    repeated queryRoleInfoResult queryResults = 1;
+}
+
+message queryRoleInfoResult{
+    optional string userID = 1;
+    optional uint64 gameID = 2;
+    repeated Attr         attrs  = 3;
+    optional baseSync_toC baseResp  = 4;
+    repeated character    characters = 5;
+    repeated equip        equips  = 6;
+    repeated weapon       weapons = 7;
+}

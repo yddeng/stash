@@ -1,0 +1,9 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message worldObjDo_req {
+
+}
+
+message worldObjDo_resp {}

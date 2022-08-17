@@ -1,0 +1,14 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+import "cs/proto/message/errerror.proto";
+
+message teamKickPlayer_req {
+   optional uint64  headerID = 1; //队长ID
+   optional uint64  kickID   = 2; //踢出队员ID
+}
+
+message teamKickPlayer_resp {
+    optional message.ErrCode errCode = 1;
+}

@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message signIn_toS {
+    optional int32 id = 1;
+}
+
+message signIn_toC {}

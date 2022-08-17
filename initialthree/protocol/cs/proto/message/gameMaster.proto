@@ -1,0 +1,16 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message gameMaster_toS {
+	repeated gmCmd cmds = 1;
+}
+
+message gmCmd{
+	optional int32 Type  = 1; // 1 属性； 2 角色； 3 道具；
+	optional int32 ID    = 2;
+	optional int32 count = 3;
+}
+
+message gameMaster_toC {
+}

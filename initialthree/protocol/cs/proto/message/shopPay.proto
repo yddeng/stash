@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message shopPay_toS {
+    optional int32 payID = 1;
+}
+
+message shopPay_toC {}

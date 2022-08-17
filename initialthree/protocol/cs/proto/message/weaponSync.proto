@@ -1,0 +1,24 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message weaponSync_toS {}
+
+message weaponSync_toC {
+    required  bool     isAll = 1;
+    repeated  weapon   weapons = 2;
+    required  int32   useCap = 3;
+}
+
+message weapon{
+    required uint32 ID = 1;
+    optional int32 ConfigID = 2;
+    optional int32 level = 3;
+    optional int32 exp = 4;
+    optional int32 refineLevel = 5; // 精炼等级
+    optional int32 equipCharacterID = 6; // 装备的角色ID
+    optional int32 breakLevel = 7;
+    optional bool  isLock = 8;
+    optional bool  isRemove = 9;
+    optional int64 getTime  = 10; //获取时间戳，秒
+}

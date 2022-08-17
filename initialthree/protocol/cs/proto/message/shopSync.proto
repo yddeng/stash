@@ -1,0 +1,21 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message shopSync_toS {}
+
+message shopSync_toC {
+    required  bool     isAll = 1;
+    repeated  product  products = 2; // 只记录已经购买过的商品
+    repeated  shop     shops = 3; // 只记录已经刷新过的商店
+}
+
+message shop{
+    required int32 id = 1;
+    required int32 alreadyRefreshTimes = 2;
+}
+
+message product{
+    required int32 id  = 1;
+    required int32 alreadyBuyTimes = 2;
+}

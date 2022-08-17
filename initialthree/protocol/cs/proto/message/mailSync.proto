@@ -1,0 +1,12 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message mailSync_toS {}
+
+message mailSync_toC {
+    optional bool isAll = 1;
+    repeated Mail mails = 2;
+}

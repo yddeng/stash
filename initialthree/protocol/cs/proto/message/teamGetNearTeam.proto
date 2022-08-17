@@ -1,0 +1,10 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+import "cs/proto/message/team.proto";
+
+message teamGetNearTeam_toS {}
+
+message teamGetNearTeam_toC {
+    repeated Team teams = 1;
+}

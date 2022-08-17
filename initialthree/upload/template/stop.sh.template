@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ -z "$1" ]
+then
+  echo "terminate"
+  ps aux | grep initialthree | grep -v 'grep' | awk '{print $2}' | xargs kill -TERM
+else
+  echo "kill"
+  ps aux | grep initialthree | grep -v 'grep' | awk '{print $2}' | xargs kill -KILL
+fi

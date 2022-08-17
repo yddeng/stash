@@ -1,0 +1,12 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message inoutput_toS {
+    optional int32 id    = 1;
+    optional int32 count = 2;
+}
+
+message inoutput_toC {
+
+}

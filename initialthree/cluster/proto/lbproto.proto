@@ -1,0 +1,8 @@
+syntax = "proto2";
+package proto;
+
+message lbReport {
+    required uint32 logic    = 1;
+    required uint32 priority = 2;
+    required uint32 capacity = 3;
+}

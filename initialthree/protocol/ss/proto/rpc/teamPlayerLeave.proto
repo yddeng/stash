@@ -1,0 +1,14 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+import  "cs/proto/message/errerror.proto";
+
+message teamPlayerLeave_req {
+	optional uint64	playerID = 1;	// 角色ID
+	optional uint32 teamID = 2;	// 队伍ID
+}
+
+message teamPlayerLeave_resp {
+	optional message.ErrCode errCode = 1;
+}

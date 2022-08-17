@@ -1,0 +1,7 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message teamGetNearTeam_req {}
+
+message teamGetNearTeam_resp {}

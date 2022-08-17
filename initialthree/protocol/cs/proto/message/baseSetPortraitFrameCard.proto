@@ -1,0 +1,11 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message baseSetPortraitFrameCard_toS {
+    optional int32 Portrait = 1;
+    optional int32 PortraitFrame = 2;
+    optional int32 Card = 3;
+}
+
+message baseSetPortraitFrameCard_toC {}

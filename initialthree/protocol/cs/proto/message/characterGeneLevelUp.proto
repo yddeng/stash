@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message characterGeneLevelUp_toS {
+    required int32  CharacterID  = 1;
+}
+
+message characterGeneLevelUp_toC {}

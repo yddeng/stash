@@ -1,0 +1,14 @@
+syntax = "proto2";
+package ssmessage;
+option go_package = "initialthree/protocol/ss/ssmessage";
+
+message mapToWorld {
+    required string mapAddr = 1;
+    repeated scene scenes = 2;
+}
+
+message scene {
+    optional int32 sceneID = 1;
+    optional int32 AOICurr = 2;
+    optional int32 AOITotal = 3;
+}

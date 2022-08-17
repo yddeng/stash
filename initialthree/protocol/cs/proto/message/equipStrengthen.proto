@@ -1,0 +1,13 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message equipStrengthen_toS {
+    required uint32  equipID  = 1;
+    repeated uint32  costEquipIDs  = 2;
+    repeated CostItem costItems = 3;
+}
+
+message equipStrengthen_toC {}

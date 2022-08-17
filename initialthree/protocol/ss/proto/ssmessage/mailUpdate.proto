@@ -1,0 +1,8 @@
+syntax = "proto2";
+package ssmessage;
+option go_package = "initialthree/protocol/ss/ssmessage";
+
+message mailUpdate {
+    optional bool   global = 1;
+    repeated uint64 gameID = 2;
+}

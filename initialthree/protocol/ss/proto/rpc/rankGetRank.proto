@@ -1,0 +1,23 @@
+syntax = "proto2";
+package rpc;
+option go_package = "initialthree/protocol/ss/rpc";
+
+message rankGetRank_req {
+    repeated uint64 roleID = 1;
+    required int32  rankID = 2;
+}
+
+message rankGetRankResult{
+    optional int32  code   = 1; // 0 没有玩家数据， 1 排行榜正在进行， 2 排行榜完结，且有排名
+    optional uint64 roleID = 2;
+    optional int32  rank   = 3; // 精确排名
+    optional int32  total  = 4; // 总人数
+    optional int32  score  = 5;
+}
+
+message rankGetRank_resp {
+    optional  bool   ok  = 1;
+    required  int32  rankID = 2;
+    optional  string redirectRankAddr = 3; // 排行榜信息不在当前服务节点，重定向实例的服务节点。
+    repeated  rankGetRankResult results = 4;
+}

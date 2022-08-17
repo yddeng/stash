@@ -1,0 +1,13 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/drawCardDraw.proto";
+
+message drawCardHistory_toS {
+    optional int32 libID = 1;
+}
+
+message drawCardHistory_toC {
+    repeated drawCardAward history = 1;
+}

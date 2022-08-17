@@ -1,0 +1,8 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message startAoi_toS {}
+
+message startAoi_toC {
+}

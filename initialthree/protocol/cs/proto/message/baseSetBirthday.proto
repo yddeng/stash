@@ -1,0 +1,9 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message baseSetBirthday_toS {
+    optional string birthday = 1;
+}
+
+message baseSetBirthday_toC {}

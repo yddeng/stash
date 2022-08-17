@@ -1,0 +1,12 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+import "cs/proto/message/common.proto";
+
+message characterGift_toS {
+    optional int32 CharacterID  = 1;
+    repeated CostItem CostItems = 2;
+}
+
+message characterGift_toC {}

@@ -1,0 +1,15 @@
+syntax = "proto2";
+package message;
+option go_package = "initialthree/protocol/cs/message";
+
+message characterTeamPrefabSet_toS {
+    required int32    teamPrefabIdx     = 1; // 固定长度 3+6
+    required characterTeamPrefab prefab = 2;
+}
+
+message characterTeamPrefabSet_toC {}
+
+message characterTeamPrefab {
+    optional string   name          = 1;
+    repeated int32    characterList = 2;
+}
